@@ -32,13 +32,10 @@
                     <a id="reset" @click="reset()" class="btn btn-sm btn-primary">Сбросить</a>
                 </div>
             </form>
-                    </div>
-        
-        <div id="appp">
             <input type="text" v-model="search" placeholder="search" />
             <table class="table table-condensed table-striped table-bordered">
                 <thead><tr><th width="9%">Id</th><th width="21%">Name</th><th width="20%">Tegs</th><th width="20%">Description</th><th width="10%">Complate</th><th width="20%"></th></tr></thead>
-             </table>
+            </table>
             <table class="table">
                 <tr class="post" v-for="post in filteredPosts ">
                     <td width="9%">{{ post.id }}</td>
@@ -50,7 +47,8 @@
                 </tr>
             </table>
         </div>
-       
+        
+      
 
      <script src="index.js"></script>
      

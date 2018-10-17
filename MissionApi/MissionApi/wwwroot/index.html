@@ -8,50 +8,50 @@
     <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
 </head>
-    <body>
-        <div id="app">
-            <form>
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input class="form-control" v-model="name" />
-                </div>
-                <div class="form-group">
-                    <label for="tegs">Tegs</label>
-                    <input class="form-control" v-model="tegs" />
-                </div>
-                <div class="form-group">
-                    <label for="descirption">Description</label>
-                    <input class="form-control" v-model="description" />
-                </div>
-                <div class="form-group">
-                    <label for="complate">Complate</label>
-                    <input type="checkbox" class="form-control" v-model="complate" />
-                </div>
-                <div class="panel-body">
-                    <button type="submit" v-on: @click="saveData()" class="btn btn-sm btn-primary">Сохранить</button>
-                    <a id="reset" @click="reset()" class="btn btn-sm btn-primary">Сбросить</a>
-                </div>
-            </form>
-            <input type="text" v-model="search" placeholder="search" />
-            <table class="table table-condensed table-striped table-bordered">
-                <thead><tr><th width="9%">Id</th><th width="21%">Name</th><th width="20%">Tegs</th><th width="20%">Description</th><th width="10%">Complate</th><th width="20%"></th></tr></thead>
-            </table>
-            <table class="table">
-                <tr class="post" v-for="post in filteredPosts ">
-                    <td width="9%">{{ post.id }}</td>
-                    <td width="21%">{{ post.name }}</td>
-                    <td width="20%">{{ post.tegs }}</td>
-                    <td width="20%">{{ post.description }}</td>
-                    <td width="10%">{{ post.complate }}</td>
-                    <td width="20%"><a @click="deleteData(post)">Delete</a></td>
-                </tr>
-            </table>
-        </div>
-        
-      
+<body>
+    <div id="app">
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input class="form-control" v-model="name" required/>
+            </div>
+            <div class="form-group">
+                <label for="tegs">Tegs</label>
+                <input class="form-control" v-model="tegs" required/>
+            </div>
+            <div class="form-group">
+                <label for="descirption">Description</label>
+                <input class="form-control" v-model="description" required/>
+            </div>
+            <div class="form-group">
+                <label for="complate">Complate</label>
+                <input type="checkbox" class="form-control" v-model="complate" />
+            </div>
+            <div class="panel-body">
+                <button type="submit" v-on: @click="saveData()" class="btn btn-sm btn-primary">Сохранить</button>
+                <a id="reset" @click="reset()" class="btn btn-sm btn-primary">Сбросить</a>
+            </div>
+        </form>
+        <input type="text" v-model="search" placeholder="search" />
+        <table class="table table-condensed table-striped table-bordered">
+            <thead><tr><th width="9%">Id</th><th width="21%">Name</th><th width="20%">Tegs</th><th width="20%">Description</th><th width="10%">Complate</th><th width="20%"></th></tr></thead>
+        </table>
+        <table class="table">
+            <tr class="post" v-for="post in filteredPosts ">
+                <td width="9%">{{ post.id }}</td>
+                <td width="21%">{{ post.name }}</td>
+                <td width="20%">{{ post.tegs }}</td>
+                <td width="20%">{{ post.description }}</td>
+                <td width="10%">{{ post.complate }}</td>
+                <td width="20%"><a @click="deleteData(post)">Delete</a></td>
+            </tr>
+        </table>
+    </div>
 
-     <script src="index.js"></script>
-     
-          
-    </body>
+
+
+    <script src="index.js"></script>
+
+
+</body>
 </html>

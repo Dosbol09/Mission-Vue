@@ -1,7 +1,4 @@
-﻿
-
-
-var vm1 = new Vue({
+﻿var vm1 = new Vue({
     el: '#app',
     data: {
         endpoint: 'api/missions/get',
@@ -24,11 +21,11 @@ var vm1 = new Vue({
 
     methods: {
         deleteData: function (post) {
-            
+
             this.$http.delete('api/missions/delete/' + post.id).then(function (response) {
 
+                this.posts.splice(post, 1);
 
-                               
             }, function (error) {
 
             })
@@ -57,17 +54,17 @@ var vm1 = new Vue({
 
         },
 
-     
-     
 
 
-    getAllPosts: function () {
-        this.$http.get(this.endpoint).then(function (response) {
-            this.posts = response.data
-        }, function (error) {
 
-        })
-    }
+
+        getAllPosts: function () {
+            this.$http.get(this.endpoint).then(function (response) {
+                this.posts = response.data
+            }, function (error) {
+
+            })
+        }
     },
     computed: {
         filteredPosts: function () {
@@ -80,10 +77,9 @@ var vm1 = new Vue({
 
 
 
-    
+
     created: function () {
         this.getAllPosts()
-           
+
     }
 })
-

@@ -11508,11 +11508,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1\\Desktop\\Dosbol\\ASP\\MissionApi\\MissionApi\\MissionApi.csproj",
+      "projectUniqueName": "C:\\Users\\1\\Desktop\\Dosbol\\ASP\\Mission-Vue\\MissionApi\\MissionApi\\MissionApi.csproj",
       "projectName": "MissionApi",
-      "projectPath": "C:\\Users\\1\\Desktop\\Dosbol\\ASP\\MissionApi\\MissionApi\\MissionApi.csproj",
+      "projectPath": "C:\\Users\\1\\Desktop\\Dosbol\\ASP\\Mission-Vue\\MissionApi\\MissionApi\\MissionApi.csproj",
       "packagesPath": "C:\\Users\\1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1\\Desktop\\Dosbol\\ASP\\MissionApi\\MissionApi\\obj\\",
+      "outputPath": "C:\\Users\\1\\Desktop\\Dosbol\\ASP\\Mission-Vue\\MissionApi\\MissionApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

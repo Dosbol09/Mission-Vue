@@ -21,10 +21,11 @@
 
     methods: {
         deleteData: function (post) {
+            var index = this.posts.indexOf(post);
 
             this.$http.delete('api/missions/delete/' + post.id).then(function (response) {
 
-                this.posts.splice(post, 1);
+                this.posts.splice(index, 1);
 
             }, function (error) {
 
